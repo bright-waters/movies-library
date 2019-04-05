@@ -1,4 +1,8 @@
 .card{
-  margin: 5%;
+  margin: 3%;
   width: 70%;
+}
+
+.btn btn-secondary{
+  margin: 2%;
 }

@@ -1,18 +1,54 @@
-
-
 <div class="card">
   <div class="card-header">
 
-    <div mat-card-avatar ></div>
+    <div mat-card-avatar></div>
 
-    <div class="card-title" ><h1>Movie Collection</h1></div>
+    <div class="card-title"><h1>Movie Collection</h1></div>
   </div>
   <div class="card-body">
-   <table class="">
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <td><b>Filter Movies</b></td>
+        <td>
+          <div class="form-group">
+            <input type="text" class="form-control" id="Name" [(ngModel)]="movieTitle"  placeholder="Name">
+          </div>
+        </td>
+        <td>
+          <div class="form-group">
+            <input type="text" class="form-control" id="Category" [(ngModel)]="movieCategory"  placeholder="Category">
+          </div>
+        </td>
+        <td><button type="button" class="btn btn-label btn-info " (click)="search()">Search</button></td>
+      </tr>
+    </thead>
+  </table>
 
-   </table>
+    <table class="table ">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Category</th>
+        <th scope="col">Rating</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <tbody class="text-body">
+       <tr *ngFor="let movie of movies;">
+        <td>{{movie.name}}</td>
+        <td>{{movie.category}}</td>
+        <td>{{movie.rating}}</td>
+        <td><button type="button" class="btn btn-secondary" (click)="onClickEditButton(movie.id)">Edit</button></td>
+        <td><button type="button" class="btn btn-danger" (click)="onClickDeleteButton(movie.id)">Delete</button></td>
+       </tr>
+      </tbody>
+    </table>
+
+    <button type="button" class="btn btn-secondary" (click)="addMovie()">Add Movie</button>
+
   </div>
   <div class="card-footer">
-
   </div>
 </div>

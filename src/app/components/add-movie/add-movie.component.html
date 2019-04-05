@@ -1,3 +1,52 @@
-<p>
-  add-movie works!
-</p>
+<div class="card">
+  <div class="card-header">
+
+    <div mat-card-avatar></div>
+
+    <div class="card-title"><h1>Add Movie</h1></div>
+  </div>
+  <div class="card-body">
+    <table class="table">
+
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Category</th>
+        <th scope="col">Rating</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <tbody class="text-body">
+      <tr>
+        <td class="mag">
+          <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputPassword1" [(ngModel)]="movieName"  placeholder="Name" required="required">
+          </div>
+        </td>
+
+
+        <td class="mag">
+          <select [(ngModel)]="category" class="form-control" required="required">
+            <option *ngFor="let cat of categories" [ngValue]="cat.categoryValue">{{cat.categoryValue}}</option>
+          </select>
+        </td>
+
+        <td class="mag">
+          <select [(ngModel)]="rating" class="form-control" required="required">
+            <option *ngFor="let rat of ratings" [ngValue]="rat.ratingValue">{{rat.ratingValue}}</option>
+          </select>
+        </td>
+
+        <td><button type="button" class="btn btn-secondary" (click)="addMovie()">Add Movie</button></td>
+        <td><button type="button" class="btn btn-dark" (click)="onCancel()">Cancel</button></td>
+
+
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="card-footer">
+  </div>
+</div>

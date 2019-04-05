@@ -1,6 +1,6 @@
 export class Category {
 
- public Id: number = null;
-  public CategoryValue: string = null;
+ public id?: number;
+  public categoryValue: string = null;
 
 }
