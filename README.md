@@ -1,31 +1,17 @@
-<<<<<<< HEAD
-# MoviesFront
+-The project contains a .dacpac file. This has the database model. This will be deployed with SQL Server. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+- Run the Movies Backend Project. (the project will run on http://locahost:5000 the base url).
 
-## Development server
+- The end points of the controllers were tested using postman.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Run npm install on the Angular Project and then ng serve. (the project will run on  http://localhost:4200)
 
-## Code scaffolding
+- While making requests from the frontend  there was an error that was encounter . (Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at http://localhost:5000/)
+  This was fixed by installing Allow-Control-Allow-Origin: * chrome extension and then adding '*' to the header. Attempt to fix this issue in code failed.
+  
+- application ready for use
+  
+  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-=======
-# movies-library
->>>>>>> origin/master
