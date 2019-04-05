@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-header">
+
+    <div mat-card-avatar></div>
+
+    <div class="card-title" ><h1>Search Results:</h1></div>
+  </div>
+  <div class="card-body">
+
+    <table class="table ">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Category</th>
+        <th scope="col">Rating</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <tbody class="text-body">
+      <tr *ngFor="let movie of movies;">
+        <td>{{movie.name}}</td>
+        <td>{{movie.category}}</td>
+        <td>{{movie.rating}}</td>
+        <td><button type="button" class="btn btn-secondary" (click)="onClickEditButton(movie.id)">Edit</button></td>
+        <td><button type="button" class="btn btn-danger" (click)="onClickDeleteButton(movie.id)">Delete</button></td>
+      </tr>
+      </tbody>
+    </table>
+
+    <button type="button" class="btn btn-secondary" (click)="back()">Back to Movie Collection</button>
+
+  </div>
+  <div class="card-footer">
+  </div>
+</div>
