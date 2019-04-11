@@ -50,4 +50,8 @@ export class ListMoviesComponent implements OnInit {
   public  async addMovie() {
    await  this.router.navigate([`addMovie`]);
   }
+
+  public  async viewOrderedAndGrouped() {
+    await  this.router.navigate([`viewOrderedRatingsCount`]);
+  }
 }

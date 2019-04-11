@@ -3,7 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
 import {Movies} from '../../models/Movies';
 import {Observable} from 'rxjs';
-import {catchError, tap} from 'rxjs/operators';
+import {RatingResults} from '../../models/RatingResults';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -39,4 +39,8 @@ export class MovieServiceService {
   public search(name?: string, category?: string) {
     return this.httpClient.get<Movies[]>(`${this.apiUrl}/search/${name}/${category}`);
   }
+
+  public GroupByRatings(){
+    return this.httpClient.get<RatingResults[]>(`${this.apiUrl}/getGroupedMovies/`);
+    }
 }

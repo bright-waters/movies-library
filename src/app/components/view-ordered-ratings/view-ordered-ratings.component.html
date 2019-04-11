@@ -1,0 +1,32 @@
+<div class="card">
+  <div class="card-header">
+
+    <div mat-card-avatar></div>
+
+    <div class="card-title" ><h1>Search Results:</h1></div>
+  </div>
+  <div class="card-body">
+
+    <table class="table ">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Rating</th>
+        <th scope="col">Number of Movies</th>
+
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <tbody class="text-body">
+      <tr *ngFor="let movie of moviesRatings;">
+        <td>{{movie.rating}}</td>
+        <td>{{movie.count}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <button type="button" class="btn btn-secondary" (click)="back()">Back to Movie Collection</button>
+
+  </div>
+  <div class="card-footer">
+  </div>
+</div>

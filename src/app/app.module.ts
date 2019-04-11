@@ -8,7 +8,8 @@ import { EditMovieComponent } from './components/edit-movie/edit-movie.component
 import { AddMovieComponent } from './components/add-movie/add-movie.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
-import { SearchComponent } from './search/search.component';
+import { SearchComponent } from './components/search/search.component';
+import { ViewOrderedRatingsComponent } from './components/view-ordered-ratings/view-ordered-ratings.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { SearchComponent } from './search/search.component';
     EditMovieComponent,
     AddMovieComponent,
     SearchComponent,
+    ViewOrderedRatingsComponent,
   ],
   imports: [
     BrowserModule,

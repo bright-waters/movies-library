@@ -33,6 +33,7 @@
         <th scope="col">Rating</th>
         <th scope="col"></th>
         <th scope="col"></th>
+
       </tr>
       </thead>
       <tbody class="text-body">
@@ -43,10 +44,17 @@
         <td><button type="button" class="btn btn-secondary" (click)="onClickEditButton(movie.id)">Edit</button></td>
         <td><button type="button" class="btn btn-danger" (click)="onClickDeleteButton(movie.id)">Delete</button></td>
        </tr>
+
+      <tr>
+        <td> <button type="button" class="btn btn-primary" (click)="addMovie()">Add Movie</button></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><button type="button" class="btn btn-primary" (click)="viewOrderedAndGrouped()">View Number Of Movies Per Rating</button></td>
+      </tr>
+
       </tbody>
     </table>
-
-    <button type="button" class="btn btn-secondary" (click)="addMovie()">Add Movie</button>
 
   </div>
   <div class="card-footer">

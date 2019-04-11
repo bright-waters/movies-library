@@ -19,4 +19,5 @@ export class CategoryServiceService {
   public getCategoryById(id: number) {
     return this.httpClient.get<Movies>(`${this.apiUrl}/getCategory/${id}`);
   }
+
 }

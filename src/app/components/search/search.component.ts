@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {RatingServiceService} from '../services/ratingService/rating-service.service';
-import {MovieServiceService} from '../services/movieService/movie-service.service';
-import {CategoryServiceService} from '../services/categoryService/category-service.service';
-import {Movies} from '../models/Movies';
+import {RatingServiceService} from '../../services/ratingService/rating-service.service';
+import {MovieServiceService} from '../../services/movieService/movie-service.service';
+import {CategoryServiceService} from '../../services/categoryService/category-service.service';
+import {Movies} from '../../models/Movies';
 
 @Component({
   selector: 'app-search',

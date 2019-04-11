@@ -43,7 +43,11 @@ export class AddMovieComponent implements OnInit {
   }
   public  addMovie() {
     this.moviesService.createMovie({ name: this.movieName, category: this.category, rating: this.rating}).subscribe();
+    setTimeout(() => {
+      window.location.reload();
+    }, 300);
     this.router.navigate([`viewMovies`]);
+
   }
   public onCancel(): void {
     setTimeout(() => {
